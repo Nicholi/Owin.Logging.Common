@@ -1,14 +1,15 @@
 <?xml version="1.0"?>
-<package >
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>$id$</id>
     <version>$version$</version>
     <title>$title$</title>
     <authors>Nicholas Schell</authors>
-    <owners>Nicholas Schell</owners>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <releaseNotes></releaseNotes>
+    <projectUrl>https://github.com/Nicholi/Owin.Logging.Common</projectUrl>
+    <licenseUrl>https://github.com/Nicholi/Owin.Logging.Common/raw/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <copyright>Copyright 2015</copyright>
     <tags>OWIN logging log Common.Logging</tags>
   </metadata>
