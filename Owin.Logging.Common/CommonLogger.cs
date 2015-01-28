@@ -7,9 +7,9 @@ namespace Owin.Logging.Common
 {
     public class CommonLogger : ILogger
     {
-        private readonly ILog m_CommonLog;
-        private readonly Func<ILog, TraceEventType, bool> m_IsLogEventEnabledFunc;
-        private readonly Action<ILog, TraceEventType, String, Exception> m_WriteLogEventFunc;
+        protected readonly ILog m_CommonLog;
+        protected readonly Func<ILog, TraceEventType, bool> m_IsLogEventEnabledFunc;
+        protected readonly Action<ILog, TraceEventType, String, Exception> m_WriteLogEventFunc;
 
         public CommonLogger(ILog commonLog, Func<ILog, TraceEventType, bool> isLogEventEnabledFunc, Action<ILog, TraceEventType, String, Exception> writeLogEventFunc)
         {

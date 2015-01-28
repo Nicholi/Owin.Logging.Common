@@ -26,5 +26,10 @@ namespace Owin.Logging.Common
         {
             app.SetLoggerFactory(new CommonLoggingFactory(isLogEventEnabledFunc, writeLogEventFunc));
         }
+
+        public static void UseCommonLogging(this IAppBuilder app, Func<String, ILog> commonLogConstructor, Func<ILog, TraceEventType, bool> isLogEventEnabledFunc, Action<ILog, TraceEventType, String, Exception> writeLogEventFunc)
+        {
+            app.SetLoggerFactory(new CommonLoggingFactory(commonLogConstructor, isLogEventEnabledFunc, writeLogEventFunc));
+        }
     }
 }
