@@ -22,7 +22,7 @@ Overloaded methods are available to control the transform of TraceEventType to l
 
 Default transform is:
 
-| TraceEventType	| NLog Loglevel |
+| TraceEventType	| Common Loglevel |
 |-----------------|---------------|
 | Critical        | Fatal			  	|
 | Error			    	| Error 		  	|
