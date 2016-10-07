@@ -14,12 +14,12 @@ namespace Owin.Logging.Common
 
         public static void UseCommonLogging(this IAppBuilder app, Func<ILog, TraceEventType, bool> isLogEventEnabledFunc)
         {
-            UseCommonLogging(app, isLogEventEnabledFunc);
+            app.SetLoggerFactory(new CommonLoggingFactory(isLogEventEnabledFunc));
         }
 
         public static void UseCommonLogging(this IAppBuilder app, Action<ILog, TraceEventType, String, Exception> writeLogEventFunc)
         {
-            UseCommonLogging(app, writeLogEventFunc);
+            app.SetLoggerFactory(new CommonLoggingFactory(writeLogEventFunc));
         }
 
         public static void UseCommonLogging(this IAppBuilder app, Func<ILog, TraceEventType, bool> isLogEventEnabledFunc, Action<ILog, TraceEventType, String, Exception> writeLogEventFunc)
