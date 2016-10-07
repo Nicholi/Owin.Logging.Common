@@ -35,15 +35,15 @@ namespace Owin.Logging.Common
         {
             if (commonLogConstructor == null)
             {
-                throw new ArgumentNullException("commonLogConstructor");
+                throw new ArgumentNullException(nameof(commonLogConstructor));
             }
             if (isLogEventEnabledFunc == null)
             {
-                throw new ArgumentNullException("isLogEventEnabledFunc");
+                throw new ArgumentNullException(nameof(isLogEventEnabledFunc));
             }
             if (writeLogEventFunc == null)
             {
-                throw new ArgumentNullException("writeLogEventFunc");
+                throw new ArgumentNullException(nameof(writeLogEventFunc));
             }
 
             m_CommonLogConstructor = commonLogConstructor;
@@ -86,7 +86,7 @@ namespace Owin.Logging.Common
                 case TraceEventType.Transfer:
                     return commonLog.IsDebugEnabled;
                 default:
-                    throw new ArgumentOutOfRangeException("traceEventType");
+                    throw new ArgumentOutOfRangeException(nameof(traceEventType), traceEventType, "Unhandled EventType");
             }
         }
 
@@ -125,7 +125,7 @@ namespace Owin.Logging.Common
                     commonLog.DebugFormat(message, ex);
                     break;
                 default:
-                    throw new ArgumentOutOfRangeException("traceEventType");
+                    throw new ArgumentOutOfRangeException(nameof(traceEventType), traceEventType, "Unhandled EventType");
             }
         }
     }

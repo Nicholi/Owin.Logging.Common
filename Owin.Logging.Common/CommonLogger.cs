@@ -15,15 +15,15 @@ namespace Owin.Logging.Common
         {
             if (commonLog == null)
             {
-                throw new ArgumentNullException("commonLog");
+                throw new ArgumentNullException(nameof(commonLog));
             }
             if (isLogEventEnabledFunc == null)
             {
-                throw new ArgumentNullException("isLogEventEnabledFunc");
+                throw new ArgumentNullException(nameof(isLogEventEnabledFunc));
             }
             if (writeLogEventFunc == null)
             {
-                throw new ArgumentNullException("writeLogEventFunc");
+                throw new ArgumentNullException(nameof(writeLogEventFunc));
             }
 
             m_CommonLog = commonLog;
