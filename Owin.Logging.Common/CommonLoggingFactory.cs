@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using Common.Logging;
 using Microsoft.Owin.Logging;
@@ -95,34 +95,34 @@ namespace Owin.Logging.Common
             switch (traceEventType)
             {
                 case TraceEventType.Critical:
-                    commonLog.FatalFormat(message, ex);
+                    commonLog.Fatal(message, ex);
                     break;
                 case TraceEventType.Error:
-                    commonLog.ErrorFormat(message, ex);
+                    commonLog.Error(message, ex);
                     break;
                 case TraceEventType.Warning:
-                    commonLog.WarnFormat(message, ex);
+                    commonLog.Warn(message, ex);
                     break;
                 case TraceEventType.Information:
-                    commonLog.InfoFormat(message, ex);
+                    commonLog.Info(message, ex);
                     break;
                 case TraceEventType.Verbose:
-                    commonLog.TraceFormat(message, ex);
+                    commonLog.Trace(message, ex);
                     break;
                 case TraceEventType.Start:
-                    commonLog.DebugFormat(message, ex);
+                    commonLog.Debug(message, ex);
                     break;
                 case TraceEventType.Stop:
-                    commonLog.DebugFormat(message, ex);
+                    commonLog.Debug(message, ex);
                     break;
                 case TraceEventType.Suspend:
-                    commonLog.DebugFormat(message, ex);
+                    commonLog.Debug(message, ex);
                     break;
                 case TraceEventType.Resume:
-                    commonLog.DebugFormat(message, ex);
+                    commonLog.Debug(message, ex);
                     break;
                 case TraceEventType.Transfer:
-                    commonLog.DebugFormat(message, ex);
+                    commonLog.Debug(message, ex);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(traceEventType), traceEventType, "Unhandled EventType");
