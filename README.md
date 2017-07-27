@@ -1,5 +1,10 @@
 # Owin.Logging.Common
 Common.Logging factory implementation for OWIN Logging
+## Nuget
+```
+Install-Package Owin.Logging.Common
+```
+[Nuget Package](https://www.nuget.org/packages/Owin.Logging.Common/)
 
 ## Using
 Configure the underlying Commong.Logging Factory Adapter as usual.
